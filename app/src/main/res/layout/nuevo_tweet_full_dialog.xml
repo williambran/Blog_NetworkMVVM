@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewclose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_blue_24dp" />
+
+    <Button
+        android:id="@+id/buttonTwittear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/bg_nuevo_tweet_button"
+        android:text="Twittear"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewclose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewclose" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewAvatarnuevotweet"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewclose"
+        app:layout_constraintStart_toStartOf="@+id/imageViewclose"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewclose"
+        tools:src="@drawable/ic_account_circle_black_24dp" />
+
+
+    <EditText
+        android:id="@+id/editTextMensaje"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="¿que esta pasando?"
+        android:textColor= "@android:color/black"
+        android:inputType="textMultiLine"
+
+        android:textColorHighlight="@color/colorPrimary"
+        android:textColorHint="@android:color/background_dark"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewAvatarnuevotweet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewAvatarnuevotweet"
+        app:layout_constraintTop_toTopOf="@+id/imageViewAvatarnuevotweet" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
